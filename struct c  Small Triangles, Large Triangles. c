@@ -1,0 +1,22 @@
+
+double tri(triangle* tr){
+    double p,res;
+    p=(tr->a+tr->b+tr->c)/2.0;
+   return sqrt(p*((p-tr->a)*(p-tr->b)*(p-tr->c)));
+}
+void sort_by_area(triangle* tr, int n) {
+    
+    triangle temp;
+   for(int i=0;i<n;i++){
+       for(int j=0;j<n;j++){
+           if(tri(&tr[i])<tri(&tr[j])){
+               temp=tr[i];
+               tr[i]=tr[j];
+               tr[j]=temp;
+           }
+       }
+   }
+	/**
+	* Sort an array a of the length n
+	*/
+}
